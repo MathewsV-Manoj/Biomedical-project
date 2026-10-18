@@ -22,6 +22,8 @@ reports/local_model_bundle/
 reports/matlab_local_model_verified/
 reports/matlab_verified/
 reports/pilot_densenet121/
+reports/example_gradcam.png
+reports/upstream_models_reference.py
 
 # Keep only the final project PowerPoint.
 deliverables/*

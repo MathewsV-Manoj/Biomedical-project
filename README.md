@@ -32,6 +32,11 @@ evaluates once on untouched test patients. The resulting model is saved at:
 
 `models/chestinsight_matlab_model.mat`
 
+The original NIH training-image collection is not stored in this repository.
+Download it from the source linked in `data/SOURCE.md`, then place the images
+in `data/images` before retraining. The included saved model, demo X-rays,
+manifest, and extracted MATLAB features are enough to run the application.
+
 The first run creates `data/matlab_features.mat`; later runs reuse it. Delete
 that file only when the dataset images or manifest are changed.
 
@@ -53,8 +58,8 @@ chestinsight_app
 3. MATLAB calculates an input-gradient saliency map for the selected finding.
    It shows which image pixels most affect that output; it is not a lesion
    boundary.
-4. MATLAB creates a display-only contrast-enhanced view, histogram, result
-   table, PNG, CSV, MAT file, and JSON summary.
+4. MATLAB creates a display-only contrast-enhanced view, selected-finding
+   result panel, score chart, PNG, CSV, MAT file, and JSON summary.
 
 ## Measured MATLAB-only pilot result
 
