@@ -1,0 +1,11 @@
+Finding,ModelScore,Threshold,AboveThreshold
+Atelectasis,0.4533271,0.44,true
+Cardiomegaly,0.2615526,0.45,false
+Effusion,0.2959167,0.62,false
+Infiltration,0.4929623,0.46,true
+Mass,0.3896295,0.54,false
+Nodule,0.5033554,0.43,true
+Pneumonia,0.1000494,0.19,false
+Pneumothorax,0.3499158,0.46,false
+Consolidation,0.2624093,0.55,false
+Edema,0.09252221,0.53,false

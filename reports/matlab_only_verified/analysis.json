@@ -1,0 +1,54 @@
+{
+  "model": "MATLAB-only multi-label neural network",
+  "findingExplained": "Cardiomegaly",
+  "labels": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Effusion",
+    "Infiltration",
+    "Mass",
+    "Nodule",
+    "Pneumonia",
+    "Pneumothorax",
+    "Consolidation",
+    "Edema"
+  ],
+  "scores": [
+    0.453327119,
+    0.261552632,
+    0.295916706,
+    0.492962331,
+    0.389629513,
+    0.503355443,
+    0.100049421,
+    0.349915773,
+    0.2624093,
+    0.0925222114
+  ],
+  "thresholds": [
+    0.44,
+    0.44999999999999996,
+    0.62,
+    0.46,
+    0.54,
+    0.43,
+    0.19,
+    0.46,
+    0.55,
+    0.53
+  ],
+  "aboveThreshold": [
+    true,
+    false,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    false,
+    false
+  ],
+  "notice": "Research prototype. Scores are not calibrated clinical probabilities and are not for diagnosis or treatment.",
+  "created": "16-Oct-2026 09:16:38"
+}

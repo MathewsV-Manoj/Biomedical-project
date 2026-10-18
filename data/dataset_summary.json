@@ -1,0 +1,61 @@
+{
+  "source": "https://huggingface.co/datasets/timm/nih-chest-xray-14",
+  "revision": "c1bf579641b3256b4d49924436984b82bee5834d",
+  "subset": true,
+  "shards": [
+    "data/train-00000-of-00032.parquet",
+    "data/train-00016-of-00032.parquet",
+    "data/test-00000-of-00010.parquet"
+  ],
+  "resize": 256,
+  "validation_split": "20% multilabel-stratified patient holdout, seed 42",
+  "split_counts": {
+    "train": 4312,
+    "test": 2560,
+    "val": 1096
+  },
+  "patient_counts": {
+    "test": 162,
+    "train": 1306,
+    "val": 327
+  },
+  "positives": {
+    "test": {
+      "Atelectasis": 309,
+      "Cardiomegaly": 178,
+      "Effusion": 415,
+      "Infiltration": 636,
+      "Mass": 111,
+      "Nodule": 139,
+      "Pneumonia": 58,
+      "Pneumothorax": 226,
+      "Consolidation": 182,
+      "Edema": 73
+    },
+    "train": {
+      "Atelectasis": 399,
+      "Cardiomegaly": 109,
+      "Effusion": 471,
+      "Infiltration": 627,
+      "Mass": 162,
+      "Nodule": 211,
+      "Pneumonia": 47,
+      "Pneumothorax": 101,
+      "Consolidation": 174,
+      "Edema": 87
+    },
+    "val": {
+      "Atelectasis": 117,
+      "Cardiomegaly": 26,
+      "Effusion": 118,
+      "Infiltration": 156,
+      "Mass": 36,
+      "Nodule": 53,
+      "Pneumonia": 12,
+      "Pneumothorax": 23,
+      "Consolidation": 37,
+      "Edema": 15
+    }
+  },
+  "limitation": "Pilot shards are not a random representative sample of the complete NIH dataset."
+}

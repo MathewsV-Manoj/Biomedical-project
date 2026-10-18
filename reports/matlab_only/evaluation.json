@@ -1,0 +1,31 @@
+{
+  "macroAuc": 0.59280855357646944,
+  "macroAveragePrecision": 0.11717656403779983,
+  "macroF1": 0.1675170677810851,
+  "bestEpoch": 5,
+  "labels": [
+    "Atelectasis",
+    "Cardiomegaly",
+    "Effusion",
+    "Infiltration",
+    "Mass",
+    "Nodule",
+    "Pneumonia",
+    "Pneumothorax",
+    "Consolidation",
+    "Edema"
+  ],
+  "thresholds": [
+    0.44,
+    0.44999999999999996,
+    0.62,
+    0.46,
+    0.54,
+    0.43,
+    0.19,
+    0.46,
+    0.55,
+    0.53
+  ],
+  "note": "Thresholds selected on validation patients only; test patients were held out."
+}

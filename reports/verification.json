@@ -1,0 +1,275 @@
+{
+  "software_checks": "passed",
+  "torch": "2.11.0+cu128",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "published_model": {
+    "model": "TorchXRayVision DenseNet121 / all (published weights)",
+    "device": "cuda",
+    "elapsed_seconds": 1.03283250000095,
+    "findings": [
+      {
+        "finding": "Atelectasis",
+        "score": 0.08496209233999252,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Cardiomegaly",
+        "score": 0.28105536103248596,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Effusion",
+        "score": 0.0814734399318695,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Infiltration",
+        "score": 0.13785307109355927,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Mass",
+        "score": 0.015927566215395927,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Nodule",
+        "score": 0.04190295562148094,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Pneumonia",
+        "score": 0.020445913076400757,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Pneumothorax",
+        "score": 0.006025329232215881,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Consolidation",
+        "score": 0.023930968716740608,
+        "threshold": null,
+        "flag": null
+      },
+      {
+        "finding": "Edema",
+        "score": 0.010045566596090794,
+        "threshold": null,
+        "flag": null
+      }
+    ],
+    "notice": "Research prototype. Scores are not calibrated disease probabilities. Not for diagnosis or treatment.",
+    "provenance": {
+      "source": "https://github.com/mlmed/torchxrayvision",
+      "training": "Published multi-dataset weights; not trained by this project.",
+      "evaluation": "No independent accuracy claim; NIH may overlap pretraining."
+    }
+  },
+  "heatmaps": {
+    "Atelectasis": {
+      "maximum": 1.0,
+      "mean": 0.02868514321744442
+    },
+    "Cardiomegaly": {
+      "maximum": 1.0,
+      "mean": 0.05776676908135414
+    },
+    "Effusion": {
+      "maximum": 1.0,
+      "mean": 0.07359809428453445
+    },
+    "Infiltration": {
+      "maximum": 1.0,
+      "mean": 0.021061182022094727
+    },
+    "Mass": {
+      "maximum": 0.0,
+      "mean": 0.0
+    },
+    "Nodule": {
+      "maximum": 0.0,
+      "mean": 0.0
+    },
+    "Pneumonia": {
+      "maximum": 1.0,
+      "mean": 0.021061182022094727
+    },
+    "Pneumothorax": {
+      "maximum": 0.0,
+      "mean": 0.0
+    },
+    "Consolidation": {
+      "maximum": 1.0,
+      "mean": 0.020732101052999496
+    },
+    "Edema": {
+      "maximum": 1.0,
+      "mean": 0.020408162847161293
+    }
+  },
+  "local_models": [
+    {
+      "checkpoint": "pilot_densenet121.pt",
+      "result": {
+        "model": "Local training: pilot_densenet121",
+        "device": "cuda",
+        "elapsed_seconds": 0.04145159999461612,
+        "findings": [
+          {
+            "finding": "Atelectasis",
+            "score": 0.36828136444091797,
+            "threshold": 0.7388575673103333,
+            "flag": false
+          },
+          {
+            "finding": "Cardiomegaly",
+            "score": 0.9893458485603333,
+            "threshold": 0.8095772862434387,
+            "flag": true
+          },
+          {
+            "finding": "Effusion",
+            "score": 0.33896398544311523,
+            "threshold": 0.5798168182373047,
+            "flag": false
+          },
+          {
+            "finding": "Infiltration",
+            "score": 0.3524978458881378,
+            "threshold": 0.47114717960357666,
+            "flag": false
+          },
+          {
+            "finding": "Mass",
+            "score": 0.20632191002368927,
+            "threshold": 0.27386561036109924,
+            "flag": false
+          },
+          {
+            "finding": "Nodule",
+            "score": 0.2096978724002838,
+            "threshold": 0.6741577386856079,
+            "flag": false
+          },
+          {
+            "finding": "Pneumonia",
+            "score": 0.0676661878824234,
+            "threshold": 0.22815649211406708,
+            "flag": false
+          },
+          {
+            "finding": "Pneumothorax",
+            "score": 0.10075952112674713,
+            "threshold": 0.32917606830596924,
+            "flag": false
+          },
+          {
+            "finding": "Consolidation",
+            "score": 0.27723434567451477,
+            "threshold": 0.5975492000579834,
+            "flag": false
+          },
+          {
+            "finding": "Edema",
+            "score": 0.1372455209493637,
+            "threshold": 0.8399966359138489,
+            "flag": false
+          }
+        ],
+        "notice": "Research prototype. Scores are not calibrated disease probabilities. Not for diagnosis or treatment.",
+        "provenance": {
+          "initialization": "ImageNet weights only; no chest X-ray pretraining",
+          "dataset": {
+            "source": "https://huggingface.co/datasets/timm/nih-chest-xray-14",
+            "revision": "c1bf579641b3256b4d49924436984b82bee5834d",
+            "subset": true,
+            "shards": [
+              "data/train-00000-of-00032.parquet",
+              "data/train-00016-of-00032.parquet",
+              "data/test-00000-of-00010.parquet"
+            ],
+            "resize": 256,
+            "validation_split": "20% multilabel-stratified patient holdout, seed 42",
+            "split_counts": {
+              "train": 4312,
+              "test": 2560,
+              "val": 1096
+            },
+            "patient_counts": {
+              "test": 162,
+              "train": 1306,
+              "val": 327
+            },
+            "positives": {
+              "test": {
+                "Atelectasis": 309,
+                "Cardiomegaly": 178,
+                "Effusion": 415,
+                "Infiltration": 636,
+                "Mass": 111,
+                "Nodule": 139,
+                "Pneumonia": 58,
+                "Pneumothorax": 226,
+                "Consolidation": 182,
+                "Edema": 73
+              },
+              "train": {
+                "Atelectasis": 399,
+                "Cardiomegaly": 109,
+                "Effusion": 471,
+                "Infiltration": 627,
+                "Mass": 162,
+                "Nodule": 211,
+                "Pneumonia": 47,
+                "Pneumothorax": 101,
+                "Consolidation": 174,
+                "Edema": 87
+              },
+              "val": {
+                "Atelectasis": 117,
+                "Cardiomegaly": 26,
+                "Effusion": 118,
+                "Infiltration": 156,
+                "Mass": 36,
+                "Nodule": 53,
+                "Pneumonia": 12,
+                "Pneumothorax": 23,
+                "Consolidation": 37,
+                "Edema": 15
+              }
+            },
+            "limitation": "Pilot shards are not a random representative sample of the complete NIH dataset."
+          },
+          "manifest_sha256": "5d27cb7665cfda40406ef1e3770a86e411eedb9624e9d1340b9416863ab01724",
+          "threshold_selection": "Maximum per-finding F1 on validation patients only",
+          "best_epoch": 3,
+          "config": {
+            "manifest": "data/manifest.csv",
+            "architecture": "densenet121",
+            "epochs": 5,
+            "batch_size": 24,
+            "size": 224,
+            "workers": 2,
+            "seed": 42,
+            "unweighted": false,
+            "run_name": "pilot_densenet121"
+          },
+          "duration_seconds": 242.13822570000048,
+          "limitations": "Pilot study. No clinical validation. Scores are uncalibrated. NIH labels are noisy."
+        }
+      }
+    }
+  ],
+  "limitation": "These checks verify software execution, not diagnostic accuracy."
+}

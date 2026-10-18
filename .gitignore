@@ -1,0 +1,28 @@
+data/downloads/
+data/images/
+reports/matlab_only_runs/
+*.asv
+
+# Local runtimes, caches, and transient checks
+.venv/
+.pytest_cache/
+__pycache__/
+**/__pycache__/
+.ppt_build/
+logs/
+logs_*.log
+
+# Superseded Python-era artifacts; the active project is MATLAB-only.
+chestinsight/
+scripts/
+tests/
+models/*.pt
+ChestInsight_MATLAB_Python_Delivery.zip
+reports/local_model_bundle/
+reports/matlab_local_model_verified/
+reports/matlab_verified/
+reports/pilot_densenet121/
+
+# Keep only the final project PowerPoint.
+deliverables/*
+!deliverables/ChestInsight_Project_Presentation_15_Slides_Final_v2.pptx
